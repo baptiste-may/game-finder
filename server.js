@@ -4,6 +4,7 @@ const express = require("express");
 
 const app = express();
 const http = require("http").createServer(app);
+const router = express.Router();
 const path = require("path");
 const port = 3000;
 
@@ -24,9 +25,17 @@ const client = new google.auth.JWT(
 
 app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 app.use(express.static("public"));
+app.use(express.static("public/search"));
+app.use(express.static("public/random"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/index.html"));
+    res.sendFile(path.join(__dirname, "public/search/index.html"));
+});
+app.get("/search", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/search/index.html"));
+});
+app.get("/random", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/random/index.html"));
 });
 
 http.listen(port, () => {

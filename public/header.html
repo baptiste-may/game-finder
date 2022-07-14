@@ -1,0 +1,23 @@
+<header>
+    <a class="headerLink" id="search" href="./search/index.html"></a>
+    <img class="headerLogo" src="../logo.png">
+    <a class="headerLink" id="random" href="./random/index.html"></a>
+  </header>
+  <style>
+    #search:after { content: "🔎 Recherche"; }
+    #random:after { content: "🎲 Aléatoire"; }
+    .headerLink { font-size: 40px; }
+    .headerLink:hover { text-decoration-color: rgba(255, 255, 255, 1); }
+    .headerLogo {
+      position: absolute;
+      top: 10px;
+      height: 200px;
+      filter: drop-shadow(0 0 1rem white);
+    }
+    @media screen and (max-width: 1100px) {
+      #search:after { content: "🔎"; }
+      #random:after { content: "🎲"; }
+      .headerLink { font-size: 50px; }
+      .headerLink:hover { text-decoration-color: rgba(255, 255, 255, 0); }
+     }
+  </style>
