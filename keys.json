@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "game-finder-data",
+  "private_key_id": "43e2fa40b59236cca0cea5fcac53ae7c920059b0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDn6Tp15JChJySO\nXrj2UJmLrQmPpPgl923cPg3v1eZL8GsDhFdnX9NgXWkLqjhW5lDVEDpNsuycYq7W\nZq14S99L1GL6cUYfMyv9tPhpX4oHb7ZPfq9Q3scw5PxOZhFVdR5B7PSetiQi6aqz\nZ0y+08b3+pwyQaiv+HqfZlUoiq+vuKJQ5h3do0Gj1zhT6rDL77B08nFtsnFMjm42\nb2k5gP9QFRy25ayBYYW4obkf2Bk0fctDZnBPd3rX3ysvOkp76iIAGaLhWBeqRcJg\nsmX9jxrvBRCz79KzqxsaSbH8GkLLB/C9YLgNuq9i+lY6sBRtTHjjiibNJAJJrAzQ\nFkxdtM9/AgMBAAECggEARRqlzWhwwlyAE55dHiSRRGIo9bEyMloC1fx1ubAywhEf\nSjp+svKGcXIUMaIkzJwvnPWLcgitYcI0F/Ybnbt6C8X7QmZLf1OHub9ZwEh0QFgE\n6rY0tnPTxhmNpyzZ4G2YOQvLLpnWtcKMF45h+4DuiokWTxFqmxj/LQ1Ytc5xoHni\nNxJp6KGJibV5aOXEZBcsm08rwQoZIpGp6kPkDds8Ug4gbO2xQIkoeLIoCz09eGpu\nmMy/PDLvdCvk8yfFwfzyVkggzJMqUvQG4t0Mm0ZWeFtpQPlJzGLN17jR1sLvba+e\nC6qYgglMZBu+wfIy6wLVIUGa9Mf0CUFfVHm5WidVeQKBgQD7kwDiTVkndLtksvIc\nONm4jBfV5PJxyQQi0EovQUshQu8lCxQziuEHrmzv8bJRqJh9Qnczseok2UBB25Ac\nSXvMwgRcQdSMzAXuL/xUcofLol+OnmgN8bapJKK+9zT9BiMs4FfPw5RQx44vYF8R\nxDCfM9/8uANSv7gB27YDVDTxZwKBgQDr/atUjIPHpW/1f2jXqyPa1yqLshkNV3hh\nl/MAYoVfFiDya5bEkPrnjnYwt4UlIUFCCDSdrpx866dpOyrn5yLx9Un+Kq+9rWF5\nr9ZHIOy3AKROpU2iCTo3DcHu96UzF/wVQqQix814tV0NSaOXtSpztAU3j2Pv//f7\nHvDDKZ7qKQKBgHNd+JvO6MGlUIJfZZP3pjBxXkTilyQDEPh+GGcPRErejRipufvh\nBk0leiOW7TVxYWyf3FZCkqOPVV5eN/og4LsHhkRgk/51WYrfSpHXa9rAfZ3Dmug6\nHo/2kwOMDiqyc9MSlnJauFtLCDNFuJNHKxz3BxK3uB5seQ+xGAjyxsylAoGBAMZJ\nPF4sOsXTcgEa7uLXv6avR+Zc3MPjDRkjbWCTZ3D/zOskD2hWURujDhfc+5i5GnX7\nIwqinoYwE1hOCL0V7rzS1zsibsu3FMIERs05EuypM2WJa3OMwUdk3eCGYF5P9tV+\nSx+WNkUITolNqJFd/a9+QSvv5Y7QynJMCwxQumARAoGBAKt5I1QYZLoOync0jzjd\niVkQo76BnDlABLUBqIEnggFpE7zCS0dmtz9FfTCpHOj4LQTo3nc6ynDxAyh9ZG1M\nRS4jeOy5xa4f/oyTISnZyx71KNKeV8riLzZAEwhvn5tp9wA5Ljx3490cspMEkawz\nadViNcjBPNMQ7jffXt2qLXu6\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-sheets-reader@game-finder-data.iam.gserviceaccount.com",
+  "client_id": "114810884228325415165",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-sheets-reader%40game-finder-data.iam.gserviceaccount.com"
+}
