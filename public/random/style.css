@@ -36,3 +36,29 @@ header a {
 .link:hover {
     text-decoration-color: rgba(220, 220, 220, 1);
 }
+
+.texts {
+    text-align: center;
+    font-size: 1.5em;
+    max-height: 1000px;
+}
+#machine {
+    text-align: center;
+    font-size: 1.5em;
+    max-height: 1000px;
+}
+#random-button {
+    font-family: Fredoka One;
+    font-size: 2em;
+    padding: 1% 2%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid white;
+    border-radius: 25px;
+    color: white;
+}
+#game-name {
+    font-size: 5em;
+    transform: scale(0);
+    transition: transform 1s ease-out;
+}

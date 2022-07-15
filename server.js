@@ -51,17 +51,25 @@ client.authorize((err, tokens) => {
 });
 
 io.on("connection", (socket) => {
-    socket.on("get-data", (range) => {
-      data = gsrun(socket, client, range);
+    socket.on("get-random-game", () => {
+      gsrun(client, "A2:A").then(() => {
+        game = DATA[Math.floor(Math.random() * DATA.length)][0];
+        socket.emit("get-random-game", game);
+      });
+    });
+    socket.on("get-game-data", (gameName) => {
+      gsrun(client, "")
     });
 });
 
-async function gsrun(socket, cl, ran) {
+let DATA;
+
+async function gsrun(cl, ran) {
   const gsapi = google.sheets({version: "v4", auth: cl});
   const opt = {
     spreadsheetId: "1SmKEXTDvOt-jvDs6K9DEGeoWtzDzluDdw1rSQv_rV1k",
     range: ran
   };
   let data = await gsapi.spreadsheets.values.get(opt);
-  socket.emit("get-data", data.data.values);
+  DATA = data.data.values;
 }
