@@ -1,7 +1,7 @@
 <header>
-    <a class="headerLink" id="search" href="./search/index.html"></a>
+    <a class="headerLink" id="search" href="#"></a>
     <img class="headerLogo" src="../logo.png">
-    <a class="headerLink" id="random" href="./random/index.html"></a>
+    <a class="headerLink" id="random" href="#"></a>
   </header>
   <style>
     #search:after { content: "🔎 Recherche"; }
@@ -21,3 +21,10 @@
       .headerLink:hover { text-decoration-color: rgba(255, 255, 255, 0); }
      }
   </style>
+  <script>
+    let url = window.location.href;
+    url = url.replace("/search/", "");
+    url = url.replace("/random/", "");
+    $("#search").attr("href", `${url}/search`);
+    $("#random").attr("href", `${url}/random`);
+  </script>

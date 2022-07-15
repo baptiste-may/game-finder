@@ -4,7 +4,6 @@ const express = require("express");
 
 const app = express();
 const http = require("http").createServer(app);
-const router = express.Router();
 const path = require("path");
 const port = 3000;
 
