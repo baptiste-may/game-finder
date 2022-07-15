@@ -52,13 +52,21 @@ client.authorize((err, tokens) => {
 
 io.on("connection", (socket) => {
     socket.on("get-random-game", () => {
-      gsrun(client, "A2:A").then(() => {
-        game = DATA[Math.floor(Math.random() * DATA.length)][0];
+      gsrun(client, "A2:G").then(() => {
+        const game = DATA[Math.floor(Math.random() * DATA.length)];
         socket.emit("get-random-game", game);
       });
     });
     socket.on("get-game-data", (gameName) => {
-      gsrun(client, "")
+      gsrun(client, "A2:G").then(() => {
+        let data = null;
+        for (i = 0; i < DATA.length; i++) {
+          if (DATA[i][0] == gameName) {
+            data = DATA[i];
+          }
+        }
+        socket.emit("get-game-data", data);
+      });
     });
 });
 
