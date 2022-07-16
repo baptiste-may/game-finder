@@ -1,9 +1,37 @@
 <header>
-    <a class="headerLink" id="search" href="#"></a>
-    <img class="headerLogo" src="../logo.png">
-    <a class="headerLink" id="random" href="#"></a>
-  </header>
+  <a class="headerLink" id="search" href="#"></a>
+  <img class="headerLogo" src="../logo.png">
+  <a class="headerLink" id="random" href="#"></a>
   <style>
+    body {
+      min-height: 100vh;
+      font-variant: small-caps;
+      font-family: Fredoka One;
+      color: rgb(255, 255, 255);
+      background-color: rgb(53, 202, 235);
+    }
+
+    header {
+      z-index: 15;
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 5px;
+      background-color: rgb(36, 221, 153);
+      font-size: 40px;
+      justify-content: space-around;
+      border: none;
+      border-bottom: 5px solid white;
+    }
+    header a {
+      float: left;
+      color: white;
+      text-decoration: underline rgba(255, 255, 255, 0);
+      transition: 0.25s ease;
+    }
+    #header { padding-top: 200px; }
     #search:after { content: "🔎 Recherche"; }
     #random:after { content: "🎲 Aléatoire"; }
     .headerLink { font-size: 40px; }
@@ -19,7 +47,7 @@
       #random:after { content: "🎲"; }
       .headerLink { font-size: 50px; }
       .headerLink:hover { text-decoration-color: rgba(255, 255, 255, 0); }
-     }
+    }
   </style>
   <script>
     let url = window.location.href;
@@ -28,3 +56,4 @@
     $("#search").attr("href", `${url}/search`);
     $("#random").attr("href", `${url}/random`);
   </script>
+</header>
