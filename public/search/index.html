@@ -10,11 +10,46 @@
 </head>
 <body>
     <div id="header"></div>
-    <div style="text-align: center; font-size: 2em;">
-        <h1>Bienvenue !</h1>
-        <p>Ce site est en <a class="link" href="https://github.com/DjRedstone/game-finder.git">construction.</a></p>
-        <p>Cependant, la base de donnée est dispobile <a class="link" href="https://docs.google.com/spreadsheets/d/1SmKEXTDvOt-jvDs6K9DEGeoWtzDzluDdw1rSQv_rV1k/edit?usp=sharing">ici</a>.</p>
+    <div class="texts">
+        <h1>Faire des recherche</h1>
+        <p>Voici l'endroit parfait pour chercher un jeu idéal !</p>
     </div>
+    <form id="options">
+        <select id="sort">
+            <option>Trié par Nom (A > Z)</option>
+            <option>Trié par Nom (Z > A)</option>
+            <option>Trié par Compléxité (Facile > Dur)</option>
+            <option>Trié par Compléxité (Dur > Facile)</option>
+        </select>
+        <div>
+            <label>Compléxité :</label>
+            <div>
+                Entre
+                <input type="number" id="complexity-min" min="1" max="10" placeholder="Min" required>
+                et
+                <input type="number" id="complexity-min" min="1" max="10" placeholder="Max" required>
+            </div>
+        </div>
+        <div>
+            <label>Joueurs :</label>
+            <div>
+                Entre
+                <input type="number" id="players-min" min="1" max="12" placeholder="Min" required>
+                et
+                <input type="number" id="players-min" min="1" max="12" placeholder="Max" required>
+            </div>
+        </div>
+        <div>
+            <label>Temps de jeu :</label>
+            <div>
+                Entre
+                <input type="number" id="players-min" min="5" max="120" placeholder="Min" required>
+                et
+                <input type="number" id="players-min" min="5" max="120" placeholder="Max" required>
+            </div>
+        </div>
+        <input type="submit" value="Chercher">
+    </form>
 
     <div id="footer"></div>
 
