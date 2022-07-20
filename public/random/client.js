@@ -13,6 +13,7 @@ $("#random-button").on("click", (e) => {
     $("#random-button").remove();
     socket.emit("get-random-game");
     socket.on("get-random-game", (game) => {
+      $("#machine").css("grid-gap", "1em");
       $("#machine").append(`<p id="game-name">${game[0]}</p>`);
       $("#machine").css("background-image", `url("${game[1]}")`);
       $("#machine").append(`<p class="game-info">Difficultée : ${game[2]}</p>`);
