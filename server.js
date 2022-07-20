@@ -51,6 +51,11 @@ client.authorize((err, tokens) => {
 });
 
 io.on("connection", (socket) => {
+    socket.on("get-data", () => {
+      gsrun(client, "A2:G").then(() => {
+        socket.emit("get-data", DATA);
+      });
+    });
     socket.on("get-random-game", () => {
       gsrun(client, "A2:G").then(() => {
         const game = DATA[Math.floor(Math.random() * DATA.length)];
