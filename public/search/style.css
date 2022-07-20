@@ -8,6 +8,7 @@
     grid-template: 
             "a b c d"
             "e e e e";
+    grid-gap: 1em;
     justify-content: space-evenly;
     justify-items: center;
     align-items: center;
@@ -20,11 +21,43 @@
     max-width: 1000px;
     height: auto;
     margin: auto;
+    font-size: 1.5em;
+}
+input {
+    font-size: 1em;
+    font-variant: small-caps;
+    font-family: Fredoka One;
+    color: white;
 }
 input[type="number"] {
     background: none;
     border: none;
-    width: 40px;
+    width: 2.5em;
+}
+input[type="submit"] {
+    padding: 1% 1%;
+    width: 25%;
+    grid-column: span 4;
+    background: none;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: width 0.5s ease-in-out;
+}
+input[type="submit"]:hover {
+    width: 75%;
+}
+@media screen and (max-width: 1100px) {
+    #options {
+        grid-template: 
+                "a b"
+                "c d"
+                "e e";
+        font-size: 2em;
+    }
+    input[type="submit"] {
+        grid-column: span 2 !important;
+    }
 }
 #games {
     max-width: 1000px;

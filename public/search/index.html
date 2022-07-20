@@ -16,10 +16,10 @@
     </div>
     <form id="options">
         <select id="sort">
-            <option>Trié par Nom (A > Z)</option>
-            <option>Trié par Nom (Z > A)</option>
-            <option>Trié par Compléxité (Facile > Dur)</option>
-            <option>Trié par Compléxité (Dur > Facile)</option>
+            <option value="0">Trié par Nom (A > Z)</option>
+            <option value="1">Trié par Nom (Z > A)</option>
+            <option value="2">Trié par Compléxité (Facile > Dur)</option>
+            <option value="3">Trié par Compléxité (Dur > Facile)</option>
         </select>
         <div>
             <label>Compléxité :</label>
@@ -27,7 +27,7 @@
                 Entre
                 <input type="number" id="complexity-min" min="1" max="10" placeholder="Min" required>
                 et
-                <input type="number" id="complexity-min" min="1" max="10" placeholder="Max" required>
+                <input type="number" id="complexity-max" min="1" max="10" placeholder="Max" required>
             </div>
         </div>
         <div>
@@ -36,19 +36,19 @@
                 Entre
                 <input type="number" id="players-min" min="1" max="12" placeholder="Min" required>
                 et
-                <input type="number" id="players-min" min="1" max="12" placeholder="Max" required>
+                <input type="number" id="players-max" min="1" max="12" placeholder="Max" required>
             </div>
         </div>
         <div>
             <label>Temps de jeu :</label>
             <div>
                 Entre
-                <input type="number" id="players-min" min="5" max="120" placeholder="Min" required>
+                <input type="number" id="time-min" min="5" max="120" placeholder="Min" required>
                 et
-                <input type="number" id="players-min" min="5" max="120" placeholder="Max" required>
+                <input type="number" id="time-max" min="5" max="120" placeholder="Max" required>
             </div>
         </div>
-        <input type="submit" value="Chercher">
+        <input id="options-submit" type="submit" value="Chercher">
     </form>
     <div id="games"></div>
 

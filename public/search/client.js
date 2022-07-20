@@ -6,6 +6,29 @@ $(function() {
 
 const socket = io();
 
+let DATA;
+
+socket.emit("get-data");
+socket.on("get-data", (data) => {
+  DATA = data;
+  setGames({sortType: 0, complexityMin: 1, complexityMax: 10, playersMin: 1, playersMax: 12, timeMin: 10, timeMax: 120});
+});
+
+function setGames(options) {
+  $("#games").empty();
+  let newData = sortData(DATA, options);
+  for (i = 0; i < newData.length; i++) {
+    const game = newData[i];
+    let element = "<div>";
+    if (game[6] != null) element += `<a href="${game[6]}"><img class="gameCover" src="${game[1]}"></a>`;
+    else element += `<img class="gameCover" src="${game[1]}">`;
+    element += `<div class="gameTitle">${game[0]}</div>`;
+    element += "</div>";
+    $("#games").append(element);
+  }
+  $("#options-submit").val("Chercher");
+}
+
 function sortData(data, options) {
   let newData = [];
   for (i = 0; i < data.length; i++) {
@@ -62,16 +85,16 @@ function sortData(data, options) {
   return newData;
 }
 
-socket.emit("get-data");
-socket.on("get-data", (data) => {
-  let newData = sortData(data, {sortType: 0, complexityMin: 1, complexityMax: 10, playersMin: 1, playersMax: 12, timeMin: 10, timeMax: 120});
-  for (i = 0; i < newData.length; i++) {
-    const game = newData[i];
-    let element = "<div>";
-    if (game[6] != null) element += `<a href="${game[6]}"><img class="gameCover" src="${game[1]}"></a>`;
-    else element += `<img class="gameCover" src="${game[1]}">`;
-    element += `<div class="gameTitle">${game[0]}</div>`;
-    element += "</div>";
-    $("#games").append(element);
-  }
+$("#options").on("submit", (e) => {
+  e.preventDefault();
+  $("#options-submit").val("Veuillez patienter...");
+  const sortType = parseInt($("#sort").val());
+  const complexityMin = parseInt($("#complexity-min").val());
+  const complexityMax = parseInt($("#complexity-max").val());
+  const playersMin = parseInt($("#players-min").val());
+  const playersMax = parseInt($("#players-max").val());
+  const timeMin = parseInt($("#time-min").val());
+  const timeMax = parseInt($("#time-max").val());
+  const options = {sortType: sortType, complexityMin: complexityMin, complexityMax: complexityMax, playersMin: playersMin, playersMax: playersMax, timeMin: timeMin, timeMax: timeMax};
+  setGames(options);
 });
