@@ -9,13 +9,13 @@
             "a b c d"
             "e e e e";
     grid-gap: 1em;
-    justify-content: space-evenly;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
     text-align: center;
     background-color: rgba(0, 255, 200, 0.5);
     border: 5px solid white;
-    border-radius: 25px;
+    border-radius: 20px;
     padding: 1% 1%;
     width: 95%;
     max-width: 1000px;
@@ -23,11 +23,21 @@
     margin: auto;
     font-size: 1.5em;
 }
+select,
 input {
+    text-align: center;
     font-size: 1em;
     font-variant: small-caps;
     font-family: Fredoka One;
     color: white;
+}
+select {
+    font-size: small;
+    background: none;
+    padding: 3% 1%;
+    background-color: rgb(36, 221, 153);
+    border: 2px solid white;
+    border-radius: 10px;
 }
 input[type="number"] {
     background: none;
@@ -38,9 +48,9 @@ input[type="submit"] {
     padding: 1% 1%;
     width: 25%;
     grid-column: span 4;
-    background: none;
+    background: rgb(36, 221, 153);
     border: 2px solid white;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
     transition: width 0.5s ease-in-out;
 }
@@ -54,6 +64,10 @@ input[type="submit"]:hover {
                 "c d"
                 "e e";
         font-size: 2em;
+    }
+    select {
+        font-size: 1em;
+        border-radius: 20px;
     }
     input[type="submit"] {
         grid-column: span 2 !important;
